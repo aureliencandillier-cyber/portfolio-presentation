@@ -31,18 +31,18 @@ Mon cursus d'ingénieur m'a avant tout appris à **"apprendre à apprendre"**. C
 ---
 
 ## 🏆 Projet Marquant
-**Automatisation de la disponibilité (Secteur Ferroviaire)**
+**Automatisation du calcul de disponibilité (Secteur Ferroviaire)**
 
-* **Objectif :** Automatiser le suivi de sécurité (feu/fumée) et la disponibilité des rames.
-* **Réalisation :** Conception d'outils de calcul de fiabilité et mise en place de processus de suivi.
-* **Résultat :** Optimisation du temps d'analyse et fiabilisation des données de sécurité.
-* **Défi personnel :** Réussite de la transition vers de nouvelles méthodes de travail avec curiosité et rigueur.
+* **Objectif :** Automatiser le calcul de disponibilité d'équipement ferroviaire en fonction de la configuration choisie.
+* **Réalisation :** Conception d'outils de calcul de disponibilité (via Excel), rédaction et mise en place du processus opérationnel.
+* **Résultat :** Optimisation du temps d'analyse et simplification drastique des analyses de disponibilité.
 
 ---
 
-### 🌍 Langues & Atouts
-* **Anglais :** Niveau Excellent / Courant (indispensable pour la veille en IA).
-* **Discipline :** Rigueur issue de 15 ans d'ingénierie et routine sportive quotidienne.
+### 💡 Atouts & Soft Skills
+* **Anglais :** Niveau Excellent / Courant (950 TOEIC/990).
+* **Discipline :** Rigueur industrielle et routine sportive quotidienne (1h30 de marche / musculation).
+* **Adaptabilité :** Réussite d'une transition de carrière majeure vers le développement IA, abordée avec curiosité et ouverture d'esprit.
 
 ---
 

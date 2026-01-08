@@ -1,0 +1,57 @@
+/* Configuration générale de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne */
+    line-height: 1.6; /* Espace entre les lignes pour aérer la lecture */
+    color: #333; /* Gris foncé (plus doux que le noir pur) */
+    max-width: 800px; /* Largeur max pour ne pas étirer le texte sur tout l'écran */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+    padding: 20px; /* Marge intérieure pour ne pas coller aux bords */
+}
+
+/* L'entête avec ton nom */
+header {
+    text-align: center;
+    background-color: #f4f4f4; /* Fond gris clair */
+    padding: 30px;
+    border-radius: 8px; /* Coins arrondis */
+    margin-bottom: 40px; /* Espace sous l'entête */
+}
+
+h1 {
+    color: #2c3e50; /* Bleu foncé professionnel */
+    margin-bottom: 10px;
+}
+
+/* Les titres de sections */
+h2 {
+    color: #2980b9; /* Bleu un peu plus clair */
+    border-bottom: 2px solid #eee; /* Petite ligne de séparation */
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Mise en valeur des mots importants */
+strong {
+    color: #e67e22; /* Une touche d'orange pour attirer l'œil */
+}
+
+/* Le pied de page */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+/* Style des liens */
+a {
+    color: #2980b9;
+    text-decoration: none; /* Enlève le soulignement moche */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Souligne quand on passe la souris dessus */
+}

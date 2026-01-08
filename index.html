@@ -5,86 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Aurélien Candillier</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
 </head>
 <body>
 
+    <nav class="nav-bar">
+        <a href="#presentation">Présentation</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#competences">Compétences</a>
+        <a href="#simulation">Simulateur</a>
+        <a href="#python">Code Python</a>
+    </nav>
+
     <header>
         <h1>Aurélien Candillier</h1>
-        <p>Développeur IA en devenir | Ex-Ingénieur Maintenance & Fiabilité</p>
+        <p class="subtitle">Ingénieur FMDS en reconversion Développeur IA</p>
+        
+        <div class="system-status">
+            <div class="status-item">
+                <span class="label">OBJECTIF :</span>
+                <span class="value">FIABILITÉ DE L'IA</span>
+            </div>
+            <div class="status-item">
+                <span class="label">EXPÉRIENCE :</span>
+                <span class="value">10 ANS (5 FMDS / 5 SIG)</span>
+            </div>
+            <div class="status-item">
+                <span class="label">ANGLAIS :</span>
+                <span class="value">TOEIC 950</span>
+            </div>
+            <div class="status-item">
+                <span class="status-dot"></span>
+                <span class="value">SÉCURISÉ</span>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="intro">
+        <div class="fmds-hero">
+            <img src="fmds-ia.png" alt="Graphique de fiabilité prédictive par IA">
+        </div>
+
+        <section id="presentation">
             <h2>👨‍💻 Présentation</h2>
             <p>Ancien <strong>Ingénieur en maintenance et fiabilité des processus industriels</strong>, je suis aujourd'hui en pleine reconversion vers le <strong>Développement et l'Intelligence Artificielle</strong>.</p>
-            <p>Mon parcours est guidé par une passion de longue date pour l'informatique et une volonté d'évoluer dans un secteur en pleine expansion technologique. J'apporte avec moi la rigueur du milieu industriel et une forte capacité d'adaptation.</p>
+            <p>J'apporte avec moi la rigueur du milieu industriel (Naval Group, Alstom) et une forte capacité d'adaptation aux systèmes complexes.</p>
         </section>
 
-        <section class="parcours">
+        <section id="parcours">
             <h2>📚 Parcours & Expérience</h2>
-            <p>Mon cursus d'ingénieur m'a avant tout appris à <strong>"apprendre à apprendre"</strong>. Cette curiosité intellectuelle est le moteur de ma reconversion actuelle.</p>
             <ul>
-                <li><strong>Ingénierie Industrielle (6 ans) :</strong> Maintenance et fiabilité des processus (dont 2 ans d'alternance chez <strong>Alstom Transport</strong> via Ingénieur 2000).</li>
-                <li><strong>Défense & naval (4 ans) :</strong> Missions pour <strong>Naval Group</strong>, <strong>Ineo Défense</strong>, et <strong>EuroCopter</strong> entre autres.</li>
-                <li><strong>Infrastructure (5 ans) :</strong> Expertise en fibre optique chez <strong>Eiffage Energie Systems</strong>. Analyse des contraintes (terrain, Orange, client), réalisation des plans de tirage et calculs des efforts sur poteaux.</li>
-                <li><strong>Projet de fin d'études (6 mois) :</strong> Étude de disponibilité de matériel ferroviaire et son <strong>automatisation</strong> (par outil programmé en VBA sur Excel).</li>
+                <li><strong>Ingénierie Industrielle & FMDS (5 ans) :</strong> Alstom Transport, Naval Group, Ineo Défense.</li>
+                <li><strong>Infrastructure & SIG (5 ans) :</strong> Eiffage Énergie Systèmes (Fibre optique).</li>
             </ul>
         </section>
 
-        <section class="skills">
+        <section id="competences">
             <h2>🛠️ Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-column">
+                    <h3>🧠 IA & Code</h3>
+                    <ul>
+                        <li>Python (Automatisation)</li>
+                        <li>HTML5 / CSS3 / JS</li>
+                        <li>Git & Versionnage</li>
+                    </ul>
+                </div>
+                <div class="skill-column">
+                    <h3>⚙️ Ingénierie</h3>
+                    <ul>
+                        <li>Expertise Excel / VBA</li>
+                        <li>Analyse de fiabilité</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="simulation">
+            <h2>🎮 Démonstrateur : Simulation de Disponibilité</h2>
+            <p>Algorithme de calcul en temps réel basé sur la logique FMDS.</p>
+            <div id="game-container">
+                <p>ÉTAT : <span id="sys-status">OPÉRATIONNEL</span></p>
+                <p>DISPONIBILITÉ : <span id="dispo-val">100</span>%</p>
+                <div class="game-controls">
+                    <button onclick="simulerPanne()" class="btn-sim btn-panne">Simuler Panne</button>
+                    <button onclick="maintenir()" class="btn-sim btn-maint">Maintenance</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="python">
+            <h2>🐍 Réalisation Python : Snake Game</h2>
             
-            <h3>🧠 Intelligence Artificielle & Code</h3>
-            <ul>
-                <li><strong>Python :</strong> Langage principal pour l'IA et l'automatisation.</li>
-                <li><strong>Web Fondamentaux :</strong> Notions en JavaScript, HTML5 et CSS3.
-                <li><strong>Versionnage :</strong> Utilisation de Git et Git GUI.</li>
-            </ul>
+            <div class="python-intro">
+                <p>Ce projet démontre ma maîtrise de la <strong>Programmation Orientée Objet (POO)</strong> en Python. Le jeu inclut un système de score, des niveaux de difficulté et une gestion d'interface fluide avec Pygame.</p>
+                
+                <div class="tech-specs">
+                    <h4 style="margin-top: 0; color: var(--accent-blue);">🛠️ Configuration requise :</h4>
+                    <ul style="font-size: 0.9em; list-style: none; padding-left: 0;">
+                        <li>🔹 <strong>Python 3.x</strong> (Langage de base)</li>
+                        <li>🔹 <strong>Librairies Standards :</strong> <code>random</code>, <code>sys</code>, <code>time</code> (Incluses par défaut)</li>
+                        <li>🔹 <strong>Librairie Externe :</strong> <code>pygame</code> (Gestion graphique)</li>
+                        <li style="margin-top: 10px; background: #000; padding: 10px; border-radius: 5px; border: 1px solid #333;">
+                            <span style="color: var(--accent-green); font-family: monospace;">$ pip install pygame</span>
+                        </li>
+                    </ul>
+                </div>
 
-            <h3>⚙️ Ingénierie & Bureautique</h3>
-            <ul>
-                <li><strong>Suite Office :</strong> Maîtrise experte d'Excel (calculs complexes) et Word.</li>
-                <li><strong>Analyse :</strong> Outils internes de calcul de fiabilité et gestion de maintenance.</li>
-            </ul>
+                <a href="Snake.py" download="Snake.py" class="btn-cv">
+                    📥 Télécharger le code source (Snake.py)
+                </a>
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="file-name">Snake.py - Aperçu technique</span>
+                </div>
+                <pre><code>
+                    import pygame
+                    import random
+                    import sys
+                    from enum import Enum
+
+                    # Configuration de l'architecture du jeu
+                    class Direction(Enum):
+                        RIGHT = 1
+                        LEFT = 2
+                        UP = 3
+                        DOWN = 4
+
+                    class SnakeGame:
+                        def __init__(self):
+                            pygame.init()
+                            self.largeur = 800
+                            self.hauteur = 600
+                            self.ecran = pygame.display.set_mode((self.largeur, self.hauteur))
+                            # ... (Logique d'initialisation du jeu) ...
+
+                        def executer(self):
+                            """Boucle principale du moteur de jeu"""
+                            # ...
+                </code></pre>
+            </div>
         </section>
-
-        <section class="project">
-            <h2>🏆 Projet Marquant</h2>
-            <h3>Automatisation du calcul de disponibilité (Secteur Ferroviaire)</h3>
-            <ul>
-                <li><strong>Objectif :</strong> Automatiser le calcul de disponibilité d'équipement ferroviaire en fonction de la configuration choisie.</li>
-                <li><strong>Réalisation :</strong> Conception d'outils de calcul de disponibilité (via Excel), rédaction et mise en place du processus opérationnel.</li>
-                <li><strong>Résultat :</strong> Optimisation du temps d'analyse et simplification drastique des analyses de disponibilité.</li>
-            </ul>
-        </section>
-
-        <section class="soft-skills">
-            <h2>💡 Atouts & Soft Skills</h2>
-            <ul>
-                <li><strong>Anglais :</strong> Niveau Excellent / Courant (950 TOEIC/990).</li>
-                <li><strong>Discipline :</strong> Rigueur industrielle et routine sportive quotidienne (1h30 de marche / musculation).</li>
-                <li><strong>Adaptabilité :</strong> Réussite d'une transition de carrière majeure vers le développement IA, abordée avec curiosité et ouverture d'esprit.</li>
-            </ul>
-        </section>
-
-        <section class="hobbies">
-            <h2>🎮 Hobbies & Intérêts</h2>
-            <ul>
-                <li><strong>Veille Technologique :</strong> Passionné par l'informatique et les innovations matérielles/logicielles.</li>
-                <li><strong>Gaming :</strong> Intérêt pour les mécaniques de jeux vidéo et les nouvelles sorties.</li>
-                <li><strong>Discipline personnelle :</strong> Pratique quotidienne du sport (Renforcement et marche active de 8.5km).</li>
-            </ul>
-        </section>
-
     </main>
 
     <footer>
-        <p>Retrouvez-moi sur : 
-            <a href="https://www.linkedin.com/in/votre-nom-de-profil/" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/aureliencandillier-cyber/portfolio-presentation" target="_blank">GitHub</a>
+        <p>
+            <a href="https://github.com/aureliencandillier-cyber/portfolio-presentation" target="_blank">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/votre-nom-de-profil/" target="_blank">LinkedIn</a>
+        </p>
+        <p style="margin-top: 10px;">
+            <a href="CV_Aurelien_Candillier_Dev_IA.pdf" class="btn-cv" target="_blank">📄 Mon CV (PDF)</a>
         </p>
     </footer>
 
+    <script>
+        let uptime = 100;
+        function simulerPanne() {
+            uptime -= (Math.random() * 5).toFixed(2);
+            document.getElementById('dispo-val').innerText = Math.max(0, uptime).toFixed(2);
+            document.getElementById('sys-status').innerText = "EN PANNE";
+            document.getElementById('sys-status').style.color = "#e74c3c";
+        }
+        function maintenir() {
+            uptime = 100;
+            document.getElementById('dispo-val').innerText = "100";
+            document.getElementById('sys-status').innerText = "OPÉRATIONNEL";
+            document.getElementById('sys-status').style.color = "#3fb950";
+        }
+    </script>
 </body>
 </html>

@@ -93,12 +93,22 @@ h1 { color: #ffffff; font-size: 2.5em; margin-bottom: 10px; line-height: 1.2; }
     margin: 25px auto 0 auto;
 }
 
+/* Le voyant lumineux */
 .status-dot {
-    height: 10px; width: 10px;
+    height: 10px;
+    width: 10px;
     background-color: var(--accent-green);
     border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
     box-shadow: 0 0 8px var(--accent-green);
     animation: blink 1.5s infinite;
+}
+
+/* L'animation de clignotement */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
 }
 
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }

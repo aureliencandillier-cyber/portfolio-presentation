@@ -2,18 +2,17 @@
    VARIABLES ET CONFIGURATION GÉNÉRALE
    ========================================================================== */
 :root {
-    --bg-color: #0d1117;      /* Fond sombre type GitHub Dark */
-    --card-bg: #161b22;       /* Fond des sections pour créer du relief */
-    --text-main: #c9d1d9;     /* Texte gris clair pour le confort visuel */
-    --accent-blue: #58a6ff;   /* Bleu "Ingénierie" pour l'action */
-    --accent-green: #3fb950;  /* Vert "Opérationnel" pour la fiabilité */
-    --accent-red: #f85149;    /* Rouge pour les alertes/pannes */
-    --border-color: #30363d;  /* Bordures subtiles */
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --text-main: #c9d1d9;
+    --accent-blue: #58a6ff;
+    --accent-green: #3fb950;
+    --accent-red: #f85149;
+    --border-color: #30363d;
 }
 
-/* Défilement fluide pour la navigation par ancres */
-html {
-    scroll-behavior: smooth;
+html { 
+    scroll-behavior: smooth; 
 }
 
 body {
@@ -27,18 +26,17 @@ body {
 }
 
 /* ==========================================================================
-   BARRE DE NAVIGATION (RESPONSIVE)
+   BARRE DE NAVIGATION (NAV-BAR)
    ========================================================================== */
 .nav-bar {
-    position: sticky; /* Reste en haut au scroll */
+    position: sticky;
     top: 0;
-    background: rgba(13, 17, 23, 0.95); /* Semi-transparent */
-    backdrop-filter: blur(8px); /* Flou moderne */
+    background: rgba(13, 17, 23, 0.95);
+    backdrop-filter: blur(10px);
     padding: 15px 0;
     border-bottom: 1px solid var(--border-color);
     text-align: center;
     z-index: 1000;
-    /* Permet le défilement horizontal si les liens débordent sur petit écran */
     white-space: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -55,39 +53,22 @@ body {
     display: inline-block;
 }
 
-.nav-bar a:hover {
-    color: var(--accent-blue);
-}
+.nav-bar a:hover { color: var(--accent-blue); }
 
-/* Évite que le haut des sections ne soit caché par le menu fixe lors du clic */
-section {
-    scroll-margin-top: 80px;
-}
+section { scroll-margin-top: 80px; }
 
 /* ==========================================================================
-   HEADER ET SYSTEM STATUS (DASHBOARD)
+   HEADER (CENTRÉ PAR DÉFAUT)
    ========================================================================== */
 header {
     text-align: center;
-    padding: 40px 0;
+    padding: 60px 0 40px 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre les éléments flex comme la status-bar */
+    align-items: center;
 }
 
-h1 { 
-    color: #ffffff; 
-    font-size: 2.5em; 
-    margin-bottom: 10px;
-    line-height: 1.2;
-}
-
-h2 {
-    color: var(--accent-blue);
-    border-left: 4px solid var(--accent-blue);
-    padding-left: 15px;
-    margin-bottom: 20px;
-}
+h1 { color: #ffffff; font-size: 2.5em; margin-bottom: 10px; line-height: 1.2; }
 
 .subtitle {
     font-size: 1.1em;
@@ -106,17 +87,12 @@ h2 {
     color: var(--accent-green);
     padding: 15px;
     border-radius: 8px;
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'Consolas', monospace;
     font-size: 0.85em;
     border: 1px solid var(--accent-green);
     margin: 25px auto 0 auto;
 }
 
-.status-item { display: flex; align-items: center; gap: 8px; }
-.label { color: #8b949e; }
-.value { font-weight: bold; }
-
-/* Point clignotant style radar industriel */
 .status-dot {
     height: 10px; width: 10px;
     background-color: var(--accent-green);
@@ -128,7 +104,7 @@ h2 {
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
 /* ==========================================================================
-   SECTIONS ET GRILLES DE COMPÉTENCES
+   SECTIONS ET GRILLES
    ========================================================================== */
 section {
     background: var(--card-bg);
@@ -143,16 +119,13 @@ h2 {
     border-left: 4px solid var(--accent-blue);
     padding-left: 15px;
     margin-bottom: 20px;
-    font-size: 1.5em;
+    transition: all 0.3s ease;
 }
-
-h3 { color: #ffffff; margin-bottom: 15px; font-size: 1.2em; }
-strong { color: var(--accent-blue); }
 
 .fmds-hero img {
     width: 100%;
     height: auto;
-    max-height: 300px;
+    max-height: 350px;
     object-fit: cover;
     border-radius: 12px;
     border: 1px solid var(--border-color);
@@ -161,118 +134,87 @@ strong { color: var(--accent-blue); }
 .skills-grid {
     display: flex;
     gap: 30px;
-    flex-wrap: wrap; /* Aligne verticalement sur mobile */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .skill-column {
     flex: 1;
-    min-width: 250px;
+    min-width: 280px;
+    max-width: 400px;
 }
 
 /* ==========================================================================
-   BOUTONS ET ÉLÉMENTS TECHNIQUES
-   ========================================================================== */
-.btn-cv {
-    display: inline-flex;
-    align-items: center;
-    background-color: var(--accent-blue);
-    color: #ffffff !important;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: transform 0.2s, background-color 0.2s;
-    border: none;
-    margin: 10px 0;
-}
-
-.btn-cv:hover {
-    background-color: #4091eb;
-    transform: translateY(-2px);
-}
-
-.tech-specs {
-    background: rgba(88, 166, 255, 0.05);
-    border: 1px solid var(--border-color);
-    border-left: 4px solid var(--accent-blue);
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-/* ==========================================================================
-   SIMULATEUR DE DISPONIBILITÉ
+   SIMULATEUR (TYPOGRAPHIE ET BOUTONS FLUIDES)
    ========================================================================== */
 #game-container {
     background: #000;
-    padding: 30px;
+    padding: clamp(15px, 4vw, 30px);
     border-radius: 8px;
     border: 1px dashed var(--accent-green);
     text-align: center;
-    margin-top: 20px;
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
 }
 
-#sys-status {
-    font-weight: bold;
-    color: var(--accent-green); /* Vert par défaut */
-}
-
-#dispo-val {
-    font-size: 2em;
-    font-weight: bold;
-    font-family: 'Consolas', monospace;
-    color: #ffffff;
+#dispo-val { 
+    font-size: clamp(1.5rem, 6vw, 2.5rem); 
+    font-weight: bold; 
+    font-family: monospace; 
 }
 
 .game-controls {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: clamp(10px, 2vw, 20px);
     margin-top: 20px;
 }
 
-/* Style de base des boutons de simulation */
 .btn-sim {
-    padding: 12px 24px;
+    padding: 0.8em 1.5em; 
     border: none;
     border-radius: 6px;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
+    font-size: clamp(0.7rem, 2vw, 0.95rem);
     transition: transform 0.2s, opacity 0.2s;
-    font-size: 0.9em;
+    min-width: 120px;
 }
 
-/* Bouton Panne : Rouge avec texte BLANC (pour contraste sur fond sombre) */
-.btn-panne {
-    background-color: var(--accent-red);
-    color: #ffffff !important;
-}
-
-/* Bouton Maintenance : Bleu avec texte NOIR ou BLANC selon préférence */
-/* Ici on met BLANC pour rester sur un style "bouton d'alerte" lisible */
-.btn-maint {
-    background-color: var(--accent-blue);
-    color: #ffffff !important;
-}
+.btn-panne { background-color: var(--accent-red); color: #ffffff !important; }
+.btn-maint { background-color: var(--accent-blue); color: #ffffff !important; }
 
 .btn-sim:hover {
     opacity: 0.9;
     transform: scale(1.05);
 }
 
-/* Responsive : Boutons l'un sur l'autre sur petit écran */
-@media (max-width: 768px) {
-    .game-controls {
-        flex-direction: column;
-    }
-    .btn-sim {
-        width: 100%;
-    }
+/* ==========================================================================
+   BOUTONS D'ACTION (CV & TÉLÉCHARGEMENT)
+   ========================================================================== */
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--accent-blue) !important;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none !important;
+    transition: transform 0.2s, background-color 0.2s;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.btn-cv:hover {
+    background-color: #4091eb !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
 }
 
 /* ==========================================================================
-   FENÊTRE DE CODE (VS CODE STYLE)
+   CODE WINDOW & PRISM.JS (CORRECTION FINALE)
    ========================================================================== */
 .code-window {
     background-color: #1e1e1e;
@@ -295,39 +237,53 @@ strong { color: var(--accent-blue); }
 .yellow { background: #ffbd2e; }
 .green { background: #27c93f; }
 
-pre {
-    padding: 15px;
-    margin: 0;
-    overflow-x: auto;
-    font-size: 0.85em;
-    background: #1e1e1e;
+/* Support Prism.js pour garder le design propre */
+pre[class*="language-"] {
+    margin: 0 !important;
+    border-radius: 0 0 8px 8px !important;
+    font-size: 0.85em !important;
+    background: #1e1e1e !important;
 }
 
-code { font-family: 'Consolas', 'Monaco', monospace; color: #dcdcdc; }
-
 /* ==========================================================================
-   MEDIA QUERIES (ADAPTATION MOBILE)
+   MEDIA QUERIES (MOBILE RESPONSIVE & CENTRAGE)
    ========================================================================== */
 @media (max-width: 768px) {
     body { padding: 0 15px 20px 15px; }
     
-    h1 { font-size: 1.8em; }
-    
-    .nav-bar a { margin: 0 8px; font-size: 0.75em; }
-
-    .system-status {
-        flex-direction: column;
-        align-items: flex-start;
+    section { 
+        text-align: center; 
+        padding: 20px;
     }
 
-    section { padding: 20px; }
+    h2 {
+        border-left: none;
+        border-bottom: 3px solid var(--accent-blue);
+        padding-left: 0;
+        padding-bottom: 10px;
+        display: inline-block;
+    }
 
-    .btn-cv, .btn-sim {
-        width: 100%; /* Boutons pleine largeur sur mobile */
+    ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .game-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-sim, .btn-cv {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
         justify-content: center;
     }
 
-    .game-controls { flex-direction: column; }
+    #game-container {
+        font-size: 1rem;
+    }
 }
 
 footer {

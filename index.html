@@ -6,6 +6,7 @@
     <title>Portfolio - Aurélien Candillier</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -103,9 +104,9 @@
                 <div class="tech-specs">
                     <h4 style="margin-top: 0; color: var(--accent-blue);">🛠️ Configuration requise :</h4>
                     <ul style="font-size: 0.9em; list-style: none; padding-left: 0;">
-                        <li>🔹 <strong>Python 3.x</strong> (Langage de base)</li>
-                        <li>🔹 <strong>Librairies Standards :</strong> <code>random</code>, <code>sys</code>, <code>time</code> (Incluses par défaut)</li>
-                        <li>🔹 <strong>Librairie Externe :</strong> <code>pygame</code> (Gestion graphique)</li>
+                        <li>🔹 <strong>Python 3.x</strong></li>
+                        <li>🔹 <strong>Librairies Standards :</strong> <code>random</code>, <code>sys</code>, <code>time</code></li>
+                        <li>🔹 <strong>Librairie Externe :</strong> <code>pygame</code></li>
                         <li style="margin-top: 10px; background: #000; padding: 10px; border-radius: 5px; border: 1px solid #333;">
                             <span style="color: var(--accent-green); font-family: monospace;">$ pip install pygame</span>
                         </li>
@@ -120,32 +121,32 @@
             <div class="code-window">
                 <div class="code-header">
                     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                    <span class="file-name">Snake.py - Aperçu technique</span>
+                    <span class="file-name">Snake.py</span>
                 </div>
-                <pre><code>
-                    import pygame
-                    import random
-                    import sys
-                    from enum import Enum
+                <pre><code class="language-python">
+import pygame
+import random
+import sys
+from enum import Enum
 
-                    # Configuration de l'architecture du jeu
-                    class Direction(Enum):
-                        RIGHT = 1
-                        LEFT = 2
-                        UP = 3
-                        DOWN = 4
+# Configuration de l'architecture du jeu
+class Direction(Enum):
+    RIGHT = 1
+    LEFT = 2
+    UP = 3
+    DOWN = 4
 
-                    class SnakeGame:
-                        def __init__(self):
-                            pygame.init()
-                            self.largeur = 800
-                            self.hauteur = 600
-                            self.ecran = pygame.display.set_mode((self.largeur, self.hauteur))
-                            # ... (Logique d'initialisation du jeu) ...
+class SnakeGame:
+    def __init__(self):
+        pygame.init()
+        self.largeur = 800
+        self.hauteur = 600
+        self.ecran = pygame.display.set_mode((self.largeur, self.hauteur))
+        # ... (Logique d'initialisation du jeu) ...
 
-                        def executer(self):
-                            """Boucle principale du moteur de jeu"""
-                            # ...
+    def executer(self):
+        """Boucle principale du moteur de jeu"""
+        # ...
                 </code></pre>
             </div>
         </section>
@@ -176,5 +177,7 @@
             document.getElementById('sys-status').style.color = "#3fb950";
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
 </html>

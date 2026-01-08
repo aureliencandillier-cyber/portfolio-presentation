@@ -19,22 +19,30 @@ Mon cursus d'ingénieur m'a avant tout appris à **"apprendre à apprendre"**. C
 
 ## 🛠️ Compétences Techniques
 
-### 💻 Développement & Web (En cours d'acquisition)
-* **Langages :** Python (Data/IA), JavaScript (Notions)
-* **Front-end :** HTML5, CSS3
-* **Outils :** Git, VS Code
+### 🧠 Intelligence Artificielle & Code
+* **Python :** Langage principal pour l'IA et l'automatisation.
+* **Web Fondamentaux :** Notions en JavaScript, HTML5 et CSS3.
+* **Versionnage :** Utilisation de Git et Git GUI.
 
-### 📊 Expertise Logicielle & Industrielle
-* **Suite Office :** Maîtrise avancée (Excel, Word, PowerPoint)
-* **Ingénierie :** Outils de calcul de fiabilité, suivi de maintenance, gestion de projets complexes.
+### ⚙️ Ingénierie & Bureautique
+* **Suite Office :** Maîtrise experte d'Excel (calculs complexes) et Word.
+* **Analyse :** Outils internes de calcul de fiabilité et gestion de maintenance.
 
 ---
 
 ## 🏆 Projet Marquant
-**Automatisation du calcul de disponibilité (Secteur Ferroviaire)**
-J'ai conçu et mis en place des outils permettant d'automatiser le suivi de la sécurité (feu/fumée) et le calcul de disponibilité des véhicules ferroviaires. 
+**Automatisation de la disponibilité (Secteur Ferroviaire)**
 
-> **Le défi :** Ma principale réussite a été de mener à bien ma réorientation professionnelle, un challenge que j'ai abordé avec ouverture d'esprit et une curiosité sans cesse renouvelée.
+* **Objectif :** Automatiser le suivi de sécurité (feu/fumée) et la disponibilité des rames.
+* **Réalisation :** Conception d'outils de calcul de fiabilité et mise en place de processus de suivi.
+* **Résultat :** Optimisation du temps d'analyse et fiabilisation des données de sécurité.
+* **Défi personnel :** Réussite de la transition vers de nouvelles méthodes de travail avec curiosité et rigueur.
+
+---
+
+### 🌍 Langues & Atouts
+* **Anglais :** Niveau Excellent / Courant (indispensable pour la veille en IA).
+* **Discipline :** Rigueur issue de 15 ans d'ingénierie et routine sportive quotidienne.
 
 ---
 
@@ -42,12 +50,6 @@ J'ai conçu et mis en place des outils permettant d'automatiser le suivi de la s
 * **Veille Technologique :** Passionné par l'informatique et les innovations matérielles/logicielles.
 * **Gaming :** Intérêt pour les mécaniques de jeux vidéo et les nouvelles sorties.
 * **Discipline personnelle :** Pratique quotidienne du sport (Renforcement et marche active de 8.5km).
-
----
-
-### 🌍 Langues & Soft Skills
-* **Anglais :** Niveau Excellent / Courant (Lecture de documentations techniques, veille technologique internationale).
-* **Soft Skills :** Rigueur industrielle, capacité d'analyse, discipline (routine sportive quotidienne de 1h30 de marche et musculation) et curiosité intellectuelle.
 
 ---
 

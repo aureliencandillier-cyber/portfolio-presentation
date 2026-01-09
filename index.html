@@ -11,11 +11,11 @@
 <body>
 
     <nav class="nav-bar">
-        <a href="#presentation">Présentation</a>
         <a href="#parcours">Parcours</a>
+        <a href="#projets">Projets</a>
         <a href="#competences">Compétences</a>
         <a href="#simulation">Simulateur</a>
-        <a href="#python">Code Python</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <header>
@@ -43,97 +43,45 @@
     </header>
 
     <main>
-        <div class="fmds-hero">
-            <img src="fmds-ia.png" alt="Graphique de fiabilité prédictive par IA">
-        </div>
-
-        <section id="presentation">
-            <h2>👨‍💻 Présentation</h2>
-            <p>Ancien <strong>Ingénieur en maintenance et fiabilité des processus industriels</strong>, je suis aujourd'hui en pleine reconversion vers le <strong>Développement et l'Intelligence Artificielle</strong>.</p>
-            <p>J'apporte avec moi la rigueur du milieu industriel (Naval Group, Alstom) et une forte capacité d'adaptation aux systèmes complexes.</p>
+        <section id="parcours">
+            <h2 class="center-content">📅 Mon Parcours</h2>
+            <div class="center-content" style="margin-bottom: 20px;">
+                <button onclick="trierParcours('date')" class="btn-sort active">📅 Date</button>
+                <button onclick="trierParcours('entreprise')" class="btn-sort">🏢 Entreprise</button>
+                <button onclick="trierParcours('poste')" class="btn-sort">🔤 Poste</button>
+            </div>
+            <div id="timeline-container"></div>
         </section>
 
-        <section id="parcours">
-            <h2>📚 Parcours & Expérience</h2>
-            <ul>
-                <li><strong>Ingénierie Industrielle & FMDS (5 ans) :</strong> Alstom Transport, Naval Group, Ineo Défense.</li>
-                <li><strong>Infrastructure & SIG (5 ans) :</strong> Eiffage Énergie Systèmes (Fibre optique).</li>
-            </ul>
+        <section id="projets">
+            <h2 class="center-content">🚀 Mes Projets Récents</h2>
+            <div id="projets-container" class="skills-grid"></div>
         </section>
 
         <section id="competences">
-            <h2>🛠️ Compétences Techniques</h2>
-            
-            <div class="filter-buttons" style="margin-bottom: 20px; text-align: center;">
+            <h2 class="center-content">🛠️ Compétences Techniques</h2>
+            <div class="center-content" style="margin-bottom: 20px;">
                 <button onclick="filtrerCompetences('all')" class="btn-filter active">Tout voir</button>
                 <button onclick="filtrerCompetences('dev')" class="btn-filter">💻 Dev & IA</button>
                 <button onclick="filtrerCompetences('indus')" class="btn-filter">⚙️ Ingénierie</button>
             </div>
-
-            <div class="skills-grid" id="skills-container">
-                </div>
+            <div id="skills-container" class="skills-grid"></div>
         </section>
 
-        <section id="contact">
-            <h2>✉️ Me contacter</h2>
-            <form id="contact-form" style="max-width: 500px; margin: 0 auto;">
-                <div style="margin-bottom: 15px;">
-                    <label for="nom" style="display:block; margin-bottom: 5px;">Nom :</label>
-                    <input type="text" id="nom" name="nom" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #333; background: #0d1117; color: white;">
-                </div>
-                
-                <div style="margin-bottom: 15px;">
-                    <label for="email" style="display:block; margin-bottom: 5px;">Email :</label>
-                    <input type="email" id="email" name="email" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #333; background: #0d1117; color: white;">
-                </div>
-
-                <div style="margin-bottom: 15px;">
-                    <label for="message" style="display:block; margin-bottom: 5px;">Message :</label>
-                    <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #333; background: #0d1117; color: white;"></textarea>
-                </div>
-
-                <button type="submit" class="btn-cv" style="width: 100%;">Envoyer le message</button>
-                
-                <p id="form-feedback" style="margin-top: 15px; font-weight: bold; display: none;"></p>
-            </form>
-        </section>
-
-        <section id="simulation">
-            <h2>🎮 Démonstrateur : Simulation de Disponibilité</h2>
-            <p>Algorithme de calcul en temps réel basé sur la logique FMDS.</p>
+        <section id="simulation" class="center-content">
+            <h2>🎮 Simulateur de Disponibilité</h2>
             <div id="game-container">
-                <p>ÉTAT : <span id="sys-status">OPÉRATIONNEL</span></p>
-                <p>DISPONIBILITÉ : <span id="dispo-val">100</span>%</p>
-                <div class="game-controls">
-                    <button onclick="simulerPanne()" class="btn-sim btn-panne">Simuler Panne</button>
-                    <button onclick="maintenir()" class="btn-sim btn-maint">Maintenance</button>
-                </div>
+                <p>DISPONIBILITÉ : <span id="dispo-val" style="font-size: 2em; font-weight: bold;">100.00</span>%</p>
+                <button onclick="simulerPanne()" class="btn-sim btn-panne">Simuler Panne</button>
+                <button onclick="maintenir()" class="btn-sim btn-maint">Maintenance</button>
             </div>
         </section>
 
         <section id="python">
-            <h2>🐍 Réalisation Python : Snake Game</h2>
-            
-            <div class="python-intro">
-                <p>Ce projet démontre ma maîtrise de la <strong>Programmation Orientée Objet (POO)</strong> en Python. Le jeu inclut un système de score, des niveaux de difficulté et une gestion d'interface fluide avec Pygame.</p>
-                
-                <div class="tech-specs">
-                    <h4 style="margin-top: 0; color: var(--accent-blue);">🛠️ Configuration requise :</h4>
-                    <ul style="font-size: 0.9em; list-style: none; padding-left: 0;">
-                        <li>🔹 <strong>Python 3.x</strong></li>
-                        <li>🔹 <strong>Librairies Standards :</strong> <code>random</code>, <code>sys</code>, <code>time</code></li>
-                        <li>🔹 <strong>Librairie Externe :</strong> <code>pygame</code></li>
-                        <li style="margin-top: 10px; background: #000; padding: 10px; border-radius: 5px; border: 1px solid #333;">
-                            <span style="color: var(--accent-green); font-family: monospace;">$ pip install pygame</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <a href="Snake.py" download="Snake.py" class="btn-cv">
-                    📥 Télécharger le code source (Snake.py)
-                </a>
+            <h2 class="center-content">🐍 Zoom : Code Python</h2>
+            <div class="center-content">
+                <a href="Snake.py" download="Snake.py" class="btn-cv">📥 Télécharger Snake.py</a>
             </div>
-
             <div class="code-window">
                 <div class="code-header">
                     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
@@ -142,42 +90,40 @@
                 <pre><code class="language-python">
 import pygame
 import random
-import sys
-from enum import Enum
-
-# Configuration de l'architecture du jeu
-class Direction(Enum):
-    RIGHT = 1
-    LEFT = 2
-    UP = 3
-    DOWN = 4
-
+# ... (Logique du jeu)
 class SnakeGame:
     def __init__(self):
         pygame.init()
-        self.largeur = 800
-        self.hauteur = 600
-        self.ecran = pygame.display.set_mode((self.largeur, self.hauteur))
-        # ... (Logique d'initialisation du jeu) ...
-
-    def executer(self):
-        """Boucle principale du moteur de jeu"""
-        # ...
+        self.ecran = pygame.display.set_mode((800, 600))
                 </code></pre>
             </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="center-content">✉️ Me Contacter</h2>
+            <form id="contact-form" class="contact-grid">
+                <div class="form-group"><input type="text" id="nom" placeholder="Nom" required></div>
+                <div class="form-group"><input type="email" id="email" placeholder="Email" required></div>
+                <div class="full-width"><textarea id="message" placeholder="Message" rows="4"></textarea></div>
+                <button type="submit" class="btn-cv full-width">Envoyer</button>
+                <div id="form-feedback" class="full-width" style="display:none; text-align: center; margin-top:10px; font-weight:bold;"></div>
+            </form>
         </section>
     </main>
 
     <footer>
         <p>
             <a href="https://github.com/aureliencandillier-cyber/portfolio-presentation" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/aur%C3%A9lien-candillier/" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/votre-nom-de-profil/" target="_blank">LinkedIn</a>
         </p>
         <p style="margin-top: 10px;">
             <a href="CV_Aurelien_Candillier_Dev_IA.pdf" class="btn-cv" target="_blank">📄 Mon CV (PDF)</a>
         </p>
+        <p>© 2025 - Aurélien Candillier - Portfolio Dynamique</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

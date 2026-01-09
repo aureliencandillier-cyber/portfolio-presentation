@@ -63,23 +63,39 @@
 
         <section id="competences">
             <h2>🛠️ Compétences Techniques</h2>
-            <div class="skills-grid">
-                <div class="skill-column">
-                    <h3>🧠 IA & Code</h3>
-                    <ul>
-                        <li>Python (Automatisation)</li>
-                        <li>HTML5 / CSS3 / JS</li>
-                        <li>Git & Versionnage</li>
-                    </ul>
-                </div>
-                <div class="skill-column">
-                    <h3>⚙️ Ingénierie</h3>
-                    <ul>
-                        <li>Expertise Excel / VBA</li>
-                        <li>Analyse de fiabilité</li>
-                    </ul>
-                </div>
+            
+            <div class="filter-buttons" style="margin-bottom: 20px; text-align: center;">
+                <button onclick="filtrerCompetences('all')" class="btn-filter active">Tout voir</button>
+                <button onclick="filtrerCompetences('dev')" class="btn-filter">💻 Dev & IA</button>
+                <button onclick="filtrerCompetences('indus')" class="btn-filter">⚙️ Ingénierie</button>
             </div>
+
+            <div class="skills-grid" id="skills-container">
+                </div>
+        </section>
+
+        <section id="contact">
+            <h2>✉️ Me contacter</h2>
+            <form id="contact-form" style="max-width: 500px; margin: 0 auto;">
+                <div style="margin-bottom: 15px;">
+                    <label for="nom" style="display:block; margin-bottom: 5px;">Nom :</label>
+                    <input type="text" id="nom" name="nom" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #333; background: #0d1117; color: white;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="email" style="display:block; margin-bottom: 5px;">Email :</label>
+                    <input type="email" id="email" name="email" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #333; background: #0d1117; color: white;">
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label for="message" style="display:block; margin-bottom: 5px;">Message :</label>
+                    <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #333; background: #0d1117; color: white;"></textarea>
+                </div>
+
+                <button type="submit" class="btn-cv" style="width: 100%;">Envoyer le message</button>
+                
+                <p id="form-feedback" style="margin-top: 15px; font-weight: bold; display: none;"></p>
+            </form>
         </section>
 
         <section id="simulation">
@@ -162,22 +178,6 @@ class SnakeGame:
         </p>
     </footer>
 
-    <script>
-        let uptime = 100;
-        function simulerPanne() {
-            uptime -= (Math.random() * 5).toFixed(2);
-            document.getElementById('dispo-val').innerText = Math.max(0, uptime).toFixed(2);
-            document.getElementById('sys-status').innerText = "EN PANNE";
-            document.getElementById('sys-status').style.color = "#e74c3c";
-        }
-        function maintenir() {
-            uptime = 100;
-            document.getElementById('dispo-val').innerText = "100";
-            document.getElementById('sys-status').innerText = "OPÉRATIONNEL";
-            document.getElementById('sys-status').style.color = "#3fb950";
-        }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

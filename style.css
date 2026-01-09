@@ -302,3 +302,24 @@ footer {
     border-top: 1px solid var(--border-color);
     color: #8b949e;
 }
+
+/* ==========================================================================
+   Partie MAIN
+   ========================================================================== */
+
+   /* Style des boutons de filtre */
+.btn-filter {
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--text-main);
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-filter:hover, .btn-filter.active {
+    background: var(--accent-blue);
+    color: white;
+}
